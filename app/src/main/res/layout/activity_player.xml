@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context="com.xicheng.catmusic.PlayerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <ImageView
+            style="@style/playerStyle"
+            android:id="@+id/musicCover"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_centerInParent="true"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="35dp"
+            android:text="开心"
+            android:textColor="@color/colorAccent"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/song_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/song_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="5dp"
+            android:text="开心"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        //上一首
+        <!--停止按钮-->
+        <ImageButton
+            android:id="@+id/bar_last"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+
+            android:layout_alignParentBottom="true"
+
+
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="33dp"
+            android:layout_toStartOf="@+id/bar_play"
+            android:background="@color/btn_Background"
+            android:scaleType="fitCenter"
+            android:src="@drawable/last_icon" />
+
+        //下一首
+
+        <!-- &lt;!&ndash;播放与暂停按钮&ndash;&gt;
+         <ImageButton
+             android:id="@+id/btn_stop"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:scaleType="fitCenter"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentBottom="true"
+             android:layout_marginStart="33dp"
+             android:layout_marginRight="27dp"
+             android:layout_marginBottom="28dp"
+             android:layout_toEndOf="@+id/bar_next"
+             android:background="@color/btn_Background"
+             android:src="@drawable/stop" />-->
+
+        <ImageButton
+            android:id="@+id/bar_play"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="33dp"
+            android:background="@color/btn_Background"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pause_icon" />
+
+        <ImageButton
+            android:id="@+id/bar_next"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginBottom="34dp"
+            android:layout_toEndOf="@+id/bar_play"
+            android:background="@color/btn_Background"
+            android:scaleType="fitCenter"
+            android:src="@drawable/next_icon" />
+
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seek_bar"
+            style="@style/CustomSeekbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:layout_above="@+id/song_time"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/song_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="97dp"
+            android:text="0:00"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/song_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seek_bar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="253dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="37dp"
+            android:text="0:00"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp" />
+    </RelativeLayout>
+</LinearLayout>
